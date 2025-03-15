@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "siputzx-api",
   "version": "0.0.1",
-  "description": "Simple Typescript Template",
+  "description": "Module Wrapper For Siputzx API",
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
@@ -27,15 +27,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Arifzyn19/ts-template"
+    "url": "git+https://github.com/Arifzyn19/siputxz-api"
   },
-  "keywords": [],
+  "keywords": [
+    "API",
+    "api",
+    "siputxz-api",
+    "siputxz",
+    "wrapper",
+    "bot-whatsapp"
+  ],
   "author": "Arifzyn19",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Arifzyn19/ts-template/issues"
+    "url": "https://github.com/Arifzyn19/siputxz-api/issues"
   },
-  "homepage": "https://github.com/Arifzyn19/ts-template",
+  "homepage": "https://github.com/Arifzyn19/siputxz-api",
   "devDependencies": {
     "@types/node": "^20.12.7",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
@@ -53,5 +60,8 @@
     "rimraf": "^4.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "axios": "^1.8.3"
   }
 }
