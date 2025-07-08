@@ -1,3 +1,3 @@
-export { SiputzxAPI } from './lib/SiputzxAPI';
-export * from './utils/api'; 
-export * from './types';
+export { SiputzxAPI } from './lib/SiputzxAPI.js';
+export * from './utils/api.js';
+export * from './types/index.js';
