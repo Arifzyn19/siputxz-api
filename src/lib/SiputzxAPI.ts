@@ -60,9 +60,9 @@ export class SiputzxAPI {
    * Get list of all available API endpoints
    */
   public async getEndpoints(): Promise<APIListResponse> {
-    const response = await this.get<APIListResponse>('/api/list');
+    const response = await this.get<APIListResponse>('/api/modules/get');
     this.endpointsList = response;
-    return response;
+    return response; 
   }
   
   /**

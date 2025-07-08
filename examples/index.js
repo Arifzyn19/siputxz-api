@@ -1,4 +1,4 @@
-import { SiputzxAPI } from '../src';
+const { SiputzxAPI } = require('../');
 
 async function main() {
   // Inisialisasi API dengan konfigurasi opsional
@@ -22,6 +22,7 @@ async function main() {
     });
     console.log('');
 
+    /*
     // 2. Menggunakan endpoint AI yang otomatis di-generate
     if (api.ai && api.ai.llama33) {
       console.log('Memanggil endpoint Llama3.3...');
@@ -53,10 +54,10 @@ async function main() {
     console.log('Menggunakan request generic GET...');
     const weatherData = await api.get('/api/tools/weather', { city: 'Jakarta' });
     console.log('Data cuaca:', weatherData);
-
+    */
   } catch (error) {
     console.error('Error:', error);
   }
 }
 
-main().catch(console.error);
+main().catch(console.error); 

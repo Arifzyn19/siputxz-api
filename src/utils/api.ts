@@ -9,21 +9,30 @@ export class ApiHelper {
    * @param example Example string from API (e.g., "param1=value1&param2=value2")
    * @returns Object containing the parameters
    */
-  static parseExampleParams(example: string): Record<string, string> {
-    if (!example) return {};
-    
+  static parseExampleParams(example: any): Record<string, any> {
+  if (!example) return {};
+  
+  if (typeof example === 'object') {
+    return example;
+  }
+  
+  if (typeof example === 'string') {
     const params: Record<string, string> = {};
     const pairs = example.split('&');
-    
+
     pairs.forEach(pair => {
       const [key, value] = pair.split('=');
       if (key && value) {
         params[key] = value;
       }
     });
-    
+
     return params;
   }
+
+  // Fallback: return empty 
+  return {};
+}
   
   /**
    * Create a camelCase function name from an endpoint title
