@@ -6,13 +6,13 @@ async function main() {
     // BASE_URL: "https://api.siputzx.my.id", // Opsional, default ke URL ini
     // apikey: 'api-key-anda',                // Opsional
   });
-
+  
   console.log('Menunggu inisialisasi endpoint...');
   // Tunggu hingga semua endpoint selesai diinisialisasi
   await api.initializeEndpoints();
   console.log(api)
   console.log('Inisialisasi selesai!');
-
+  
   try {
     // 1. Melihat kategori yang tersedia
     const endpoints = await api.getEndpoints();
@@ -21,8 +21,7 @@ async function main() {
       console.log(`- ${category} (${endpoints.routes[category].endpoints.length} endpoint)`);
     });
     console.log('');
-
-    /*
+    
     // 2. Menggunakan endpoint AI yang otomatis di-generate
     if (api.ai && api.ai.llama33) {
       console.log('Memanggil endpoint Llama3.3...');
@@ -49,12 +48,12 @@ async function main() {
         }
       });
     }
-
+    
     // 4. Menggunakan request generic untuk endpoint yang diinginkan
     console.log('Menggunakan request generic GET...');
-    const weatherData = await api.get('/api/tools/weather', { city: 'Jakarta' });
-    console.log('Data cuaca:', weatherData);
-    */
+    const animeData = await api.get('/api/anime/anichin-detail', { url: 'https%3A%2F%2Fanichin.forum%2Frenegade-immortal-episode-69-subtitle-indonesia%2F' });
+    console.log('Data cuaca:', animeData);
+    
   } catch (error) {
     console.error('Error:', error);
   }
